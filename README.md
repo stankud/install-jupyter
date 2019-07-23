@@ -20,4 +20,11 @@ export PYSPARK_DRIVER_PYTHON_OPTS='notebook'
 ```
 **NOTE**: Make sure you unset SPARK_HOME environment variable if it is set. Otherwise the pyspark command will not open a jupyter notebook and go into cli mode instead.
 
+## 4. [OPTIONAL]
+This command will make your notebooks work with your active venv:
+```
+ipython profile create
+curl -L http://hbn.link/hb-ipython-startup-script > ~/.ipython/profile_default/startup/00-venv-sitepackages.py
+```
+
 Now run `pyspark` and it should open up a Jupyter Notebook
